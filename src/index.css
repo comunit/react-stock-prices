@@ -1,13 +1,231 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spline Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../public/img/stocks-background.jpg") no-repeat center center;
+    position: relative;
+}
+
+.stock-input-box {
+    background: #fff;
+    margin: 10px;
+    width: 600px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15)!important;
+    z-index: 2;
+}
+
+.btn-search {
+    width: 130px;
+    font-weight: bold !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+}
+
+.loader-container {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.stock-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.stock-container-inner {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15)!important;
+    margin: 10px;
+}
+
+.stock-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.stock-symbol {
+    font-size: 1.4rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.stock-current-price {
+    margin-top: 20px;
+}
+
+.stock-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stock-currency {
+    display: block;
+    font-size: 1rem;
+    margin-top: -10px;
+}
+
+.stock-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.stock-stat-box {
+    flex: 1 1 0px;
+    margin: 10px;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.main-info {
+    font-size: 1.6rem;
+}
+
+.desc {
+    font-size: 0.7rem;
+}
+
+.stock-average-rating {
+    margin-top: 40px;
+}
+
+.an-rating-desc {
+    font-size: 1.3rem;
+}
+
+.an-output {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.linebreak {
+    display: block;
+    width: 66px;
+    height: 4px;
+    background: #8af;
+    padding-bottom: 0!important;
+}
+
+.margin-0-40 {
+    margin: 0 20px;
+    margin-top: 10px;
+}
+
+.stock-price-stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.loader-up {
+    margin-top: 0px;
+}
+
+.stock-price-stats-tables {
+    display: flex;
+    flex-direction: row;
+}
+
+.stock-price-stats-inner {
+    flex: 1 1 0px;
+    margin: 10px;
+}
+
+.stocks-price-first,
+.stocks-price-second {
+    flex: 1 1 0px;
+    padding: 10px;
+}
+
+.stocks-price-second {
+    text-align: right;
+    font-weight: bold;
+}
+
+.stock-price-stats-tables {
+    border-bottom: #e0e4e9 1px solid;
+}
+
+.longbusinesssummary {
+    padding: 5px;
+    margin: 0 20px;
+}
+
+.stockvaluediv {
+    font-size: 2rem;
+    text-align: right;
+}
+
+.outputchartdate {
+    text-align: right;
+}
+
+.chart-ranges {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.chart-ranges li {
+    flex: 1 1 0px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.active-range {
+    font-weight: bold;
+}
+
+.active-range::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #8af;
+}
+
+@media screen and (max-width: 720px) {
+    .margin-0-40 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stock-price-stats,
+    .stock-stats {
+        flex-direction: column;
+    }
 }
