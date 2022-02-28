@@ -3,7 +3,7 @@ var axios = require('axios');
 const API_URL_STOCK_DATA = 'https://yfapi.net/v6/finance/quote?symbols=';
 const API_STOCK_SUMMARY_URL = 'https://yfapi.net/v11/finance/quoteSummary/';
 const API_CHART_URL = 'https://yfapi.net/v8/finance/chart/';
-const API_KEY = 'PhUbtwTK128sFeukruhZz1r1p9Yg2rXy9XjGprK5';
+const API_KEY = 'Lk0nhuXUo68YBiKAJvReK4x8jxeFIOQm3hcuBj3C';
 
 const GetAPIData = async(stockCode) => {
 
