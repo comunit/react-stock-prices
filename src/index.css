@@ -32,6 +32,26 @@
     font-weight: bold !important;
 }
 
+.input-main {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 0%;
+    padding-left: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.right {
+    float: right;
+}
+
+.input-main:focus {
+    outline: none;
+}
+
 .center {
     text-align: center;
 }
@@ -226,6 +246,10 @@
 @media screen and (max-width: 600px) {
     .stock-price-stats,
     .stock-stats {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .stock-stats :nth-child(5) {
+        grid-column: span 2;
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import LineChart from "../components/LineChart";
-import { FaExchangeAlt, FaStopwatch, FaFirstOrderAlt, FaRegBuilding, FaVoteYea, FaMoneyCheckAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaExchangeAlt, FaStopwatch, FaFirstOrderAlt, FaRegBuilding, FaVoteYea, FaMoneyCheckAlt } from 'react-icons/fa';
 import numeral from 'numeral';
 
 function StockInformation(stock) {
@@ -12,6 +12,11 @@ function StockInformation(stock) {
       
     <div className="stock-container">
         <div className="stock-container-inner">
+            {/* BACK BUTTON  */}
+            <div className="btn btn-primary" onClick={() => window.history.back()}>
+                <FaArrowLeft />
+            </div>
+            
             {/* HEAD  */}
             <div className="stock-name center">{stockData.longName}</div>   
             <div className="stock-symbol center">{stockSummaryData.assetProfile.industry}</div>

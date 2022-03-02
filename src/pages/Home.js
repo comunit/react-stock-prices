@@ -16,7 +16,10 @@ function Home() {
 
     // handle change of input
     const handleChange = (e) => {
-      setstockValue(e.target.value);
+      let stockCode = e.target.value;
+      // remove all spaces
+      stockCode = stockCode.replace(/\s/g, '');
+      setstockValue(stockCode);
     }
   
     // handle submit of form
@@ -38,10 +41,9 @@ function Home() {
     <div className="stock-input-box">
       <Form onSubmit={handleFormSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label className="bold">Enter a Stock Code</Form.Label>
-              <Form.Control type="text" placeholder="MGM... COWN..." value={stockValue} onChange={handleChange}/>
+              <input className='input-main' type="text" placeholder="MGM... COWN..." value={stockValue} onChange={handleChange} />
           </Form.Group>
-          <div className="center">
+          <div className="right">
             <Button variant="primary" type="submit" variant="info" className='btn-search'>
               Get Info
             </Button>
